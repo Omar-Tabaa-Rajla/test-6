@@ -1,8 +1,11 @@
+import { useContext } from 'react';
+import { AppContext } from '../AppContext';
 export const PageAbout = () => {
+	const { subject } = useContext(AppContext);
 	return (
 		<div className="page_about">
 			<h2>About</h2>
-			<p>This is some info about the site.</p>
+			<p>the currently subject is: {subject}</p>
 		</div>
-	)
-}
+	);
+};
